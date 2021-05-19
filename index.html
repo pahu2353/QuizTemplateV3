@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Capital Cities Quiz!</title>
+	<script src="quizproject.js"></script>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="icons/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json">
+  
+</head>
+<body onLoad="loadQuestion()">
+
+<div id="lightbox" onclick="closeLightBox()">
+	<div id="message"> This is the message </div>
+</div>
+
+<audio src="music.mp3"></audio>
+
+<h2>Capital Cities Quiz!</h2>
+<p>Hi! This is a multiple choice quiz on capital cities. You will have to answer ten questions on the capital cities of certain countries. Your current score is based on the questions that you've answered already, and your overall score is based on all the questions in the quiz. Watch your timer; when it hits zero, the game will end. Have fun! </p>
+
+<div class="grid-container">
+  <div class="header">
+    <div id="question">The Question</div>
+  </div>
+  
+  <div class="left">
+    <div>
+     <div class="options" id="a" onclick="markIt('a')">A.</div>
+	 <div class="options" id="b" onclick="markIt('b')">B.</div>
+     <div class="options" id="c" onclick="markIt('c')">C.</div>
+	 <div class="options" id="d" onclick="markIt('d')">D.</div>
+	</div>
+  </div> 
+
+  
+  <div class="right"> <img id="image" src="" alt=""></div>
+  
+  <div class="footer1" id=countdown>
+  </div>
+  
+  <div class="footer2">
+    <p>Overall Score: <span id="score"> </span> </p>
+    <br> <p onclick="GiveMeTheAnswer()"> Give me the answer :P </p>
+  </div>
+</div>
+
+</body>
+</html>
